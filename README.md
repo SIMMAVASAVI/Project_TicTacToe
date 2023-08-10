@@ -33,7 +33,7 @@ TicTacToe is a 2 player game played on a 3 x 3 board. Each player is allotted a 
 
 ### Class Diagram
 
-![TicTacToe.drawio.png](..%2FDesktop%2FTicTacToe.drawio.png)
+![online](res/TicTacToe.drawio.png)
 
 
 
