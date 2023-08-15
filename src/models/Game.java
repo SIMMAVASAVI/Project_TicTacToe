@@ -41,7 +41,7 @@ public class Game {
     }
 
     public GameStatus getGameState() {
-        return gameState;
+        return gameStatus;
     }
 
     public int getNextPlayerToMove() {
@@ -110,7 +110,7 @@ public class Game {
         private void validatePlayerSymbols(){
             HashSet<Character> set = new HashSet<>();
             for(Player player: players){
-                set.add(player.getSymbol());
+                set.add(player.getSymbol().getSymbolChar());
             }
             if(players.size()!=set.size()){
                 throw new DuplicateSymbolException("Each Player Should have unique Symbol");
