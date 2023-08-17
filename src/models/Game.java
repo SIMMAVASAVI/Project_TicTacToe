@@ -4,6 +4,7 @@ import exceptions.DuplicateSymbolException;
 import exceptions.InvalidBotCountException;
 import exceptions.InvalidDimensionException;
 import exceptions.InvalidPlayerCountException;
+import strategies.winningStrategy.WinningStrategy;
 
 import java.util.*;
 
@@ -55,7 +56,7 @@ public class Game {
     public static Builder builder(){
         return(new Builder());
     }
-    private static class Builder{
+    public static class Builder{
         List<Player>  players;
         int dimension;
         List<WinningStrategy> winningStrategies;
