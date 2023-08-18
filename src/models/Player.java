@@ -23,10 +23,6 @@ public class Player {
         return idCounter;
     }
 
-    public static void setIdCounter(int idCounter) {
-        Player.idCounter = idCounter;
-    }
-
     public int getId() {
         return id;
     }
@@ -71,8 +67,10 @@ public class Player {
         System.out.println("Please enter the row to move: ");
         int row = sc.nextInt();
         System.out.println("Please enter the column to move: ");
-        int column= sc.nextInt();
+        int col= sc.nextInt();
 
-        return new Move(new Cell(row,column,this),this);
+        board.getBoard().get(row).get(col).setPlayer(this);
+        board.getBoard().get(row).get(col).setCellState(CellState.FILLED);
+        return new Move(new Cell(row,col,this),this);
     }
 }
