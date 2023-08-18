@@ -25,6 +25,7 @@ public class Board {
             for (int j = 0; j < this.size; j++) {
                 cells.get(j).display();
             }
+            System.out.println();
         }
     }
 
@@ -36,12 +37,12 @@ public class Board {
         this.size = size;
     }
 
-    public List<List<Cell>> getCells() {
+    public List<List<Cell>> getBoard() {
         return board;
     }
 
-    public void setCells(List<List<Cell>> cells) {
-        this.board = cells;
+    public void setCells(List<List<Cell>> board) {
+        this.board = board;
     }
 
 
