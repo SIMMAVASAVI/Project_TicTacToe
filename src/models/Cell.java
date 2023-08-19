@@ -56,7 +56,7 @@ public class Cell {
         if(player==null){
             System.out.print("| |");
         }
-        else if(cellState.equals(CellState.Blocked)){
+        else if(cellState.equals(CellState.BLOCKED)){
             System.out.print("|X|");
         }
         else{

@@ -14,7 +14,7 @@ public class Board {
         for(int i=0;i<this.size;i++){
             this.board.add(new ArrayList<>());
             for(int j=0;j<this.size;j++){
-                this.board.get(j).add(new Cell(i,j));
+                this.board.get(i).add(new Cell(i,j));
             }
         }
     }

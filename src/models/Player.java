@@ -74,4 +74,11 @@ public class Player {
         return new Move(new Cell(row,col,this),this);
 
     }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

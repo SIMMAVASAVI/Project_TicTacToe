@@ -20,19 +20,20 @@ public class TicTacToe {
 
         List<Player> playersList = new ArrayList<>();
         int playerCount = size - 1;
-        if (isBot == "Y") {
+        if (isBot.equals("Y")) {
             playerCount = size - 2;
         }
 
         for (int i = 0; i < playerCount; i++) {
-            System.out.println("Please enter name of player " + i + " : ");
+            System.out.println("Please enter name of player " + (i+1)+ " : ");
             String name = sc.next();
-            System.out.println("Please enter symbol for player " + i + " :");
+            System.out.println("Please enter symbol for player " + (i+1)+ " :");
             String symbol = sc.next();
             Player player = new Player(name, PlayerType.HUMAN, new Symbol(symbol.charAt(0)));
+            playersList.add(player);
         }
 
-        if (isBot == "Y") {
+        if (isBot.equals("Y")) {
             System.out.println("Please enter name of BOT : ");
             String name = sc.next();
             System.out.println("Please enter symbol for BOT : ");
@@ -56,7 +57,8 @@ public class TicTacToe {
             Move movePlayed= gameController.makeMove(game,playersList.get(playerIndex));
             Player winner= gameController.checkWinner(game,movePlayed);
             if(winner!=null){
-                System.out.println("Winner is player : ");
+                gameController.printBoard(game);
+                System.out.println("Winner is player : "+ winner.getName());
                 break;
             }
         }
